@@ -1,0 +1,14 @@
+---
+title: "Homework 3"
+author: "Ben Wollack"
+date: "2026/05/28"
+format: pdf
+editor: source
+execute:
+  message: false
+  warning: false
+---
+
+# Set Up
+
+# Problem 1
