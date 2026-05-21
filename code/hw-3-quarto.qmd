@@ -120,7 +120,13 @@ r = -0.688
 
 ## d.
 
+To evaluate the strength of the relationship between water temperature (in Celsius) and kelp elongation rate (in cm per day), we used Pearson's correlation. We chose this because the scatterplot of data showing this relationship appeared linear, and the residuals were normally distributed and showed homoscedasticity.
+
+We found a moderate, inverse relationship between water temperature and kelp elongation rate (Pearson's r = -0.688, t(30) = -5.189, p < 0.001, $\alpha$ = 0.05).
+
 ## e.
+
+We found a moderate, inverse relationship between water temperature and kelp elongation rate (Pearson's r = -0.688, t(30) = -5.189, p < 0.001, $\alpha$ = 0.05). Our model predicts that as water temperature increases, kelp will grow more slowly. As ocean temperatures warm due to climate change, kelp growth rate will likely decrease and threaten the health of kelp forest ecosystems.
 
 ## f.
 
