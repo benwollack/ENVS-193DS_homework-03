@@ -34,6 +34,32 @@ To determine the strength of the relationship between temperature and kelp elong
 
 ## b.
 
+```{r}
+#| label: kelp-visual
+
+# create base layer using kelp data
+# predictor (x-axis): temperature
+# response (y-axis): kelp_elong
+ggplot(data = kelp,
+       aes(
+         x = temp_c,
+         y = kelp_elong
+       )) +
+  # add points, which creates a scatterplot for the data
+  geom_point(
+    # change color to a kelp-like color
+    color = "seagreen4",
+    # change default shape
+    shape = 17
+  ) +
+  # change theme to remove gridlines
+  theme_classic() +
+  labs(
+    x = "Temperature (celsius)",
+    y = "Kelp Elongation (cm/day)"
+  )
+```
+
 ## c.
 
 ## d.
