@@ -1,0 +1,68 @@
+---
+title: "Homework 3"
+author: "Ben Wollack"
+date: "2026/05/28"
+format: pdf
+editor: source
+execute:
+  message: false
+  warning: false
+---
+
+# Set Up
+
+```{r}
+#| label: read-in
+
+# read in packages
+library(tidyverse)
+library(here)
+library(janitor)
+library(readxl)
+
+# read in data
+kelp <- read_csv(here("data", "temp-kelp.csv"))
+```
+
+
+# Problem 1
+
+## a.
+
+## b.
+
+## c.
+
+## d.
+
+## e.
+
+## f.
+
+# Problem 2
+
+## a.
+
+## b.
+
+# Problem 3
+
+## a.
+
+## b.
+
+## c.
+
+## d.
+
+## e.
+
+# Problem 4
+
+## a.
+
+## b.
+
+## c.
+
+## d.
