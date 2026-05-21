@@ -106,6 +106,17 @@ cor.test(kelp$temp_c, kelp$kelp_elong,
          method = "pearson")
 ```
 
+To prepare for writing about the results, here are the important outputs.
+
+t = -5.189
+
+df = 30
+
+p < 0.001
+
+95% CI: [-0.836, -0.446]
+
+r = -0.688
 
 ## d.
 
