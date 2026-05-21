@@ -2,7 +2,9 @@
 title: "Homework 3"
 author: "Ben Wollack"
 date: "2026/05/28"
-format: pdf
+format:
+  pdf:
+    toc: true
 editor: source
 execute:
   message: false
@@ -24,10 +26,11 @@ library(readxl)
 kelp <- read_csv(here("data", "temp-kelp.csv"))
 ```
 
-
 # Problem 1
 
 ## a.
+
+To determine the strength of the relationship between temperature and kelp elongation rate, we will need a correlation test, of which there are two: Pearson's correlation (r) and Spearman's correlation ($\rho$). Both require independent observations. Pearson's correlation is the parametric version and also requires data that appears linear and continuous. Spearman's correlation is the nonparametric version and requires data that is monotonic, meaning that as one variable increases, the other variable, on average, strictly increases or decreases; the trend cannot go up and down. 
 
 ## b.
 
