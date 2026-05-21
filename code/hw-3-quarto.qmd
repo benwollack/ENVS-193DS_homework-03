@@ -54,13 +54,58 @@ ggplot(data = kelp,
   ) +
   # change theme to remove gridlines
   theme_classic() +
+  # rename x and y axes to make them more readable
   labs(
     x = "Temperature (celsius)",
     y = "Kelp Elongation (cm/day)"
   )
 ```
 
+There may be a slight curve in the data, but a linear model also seems reasonable. We can check using diagnostic plots.
+
 ## c.
+
+Since the data appears linear, we will run a Pearson's correlation, which requires checking for linearity, the normality of the residuals and the homoscedasticity of the residuals.
+
+### Diagnostic Plots
+
+```{r}
+#| label: kelp-model
+
+# create a linear model in an object called kelp_model
+# this lets us later test for linearity
+kelp_model <- lm(
+  # formula: kelp elongation as a function of temperature
+  kelp_elong ~ temp_c,
+  # use kelp data
+  data = kelp
+)
+```
+
+```{r}
+#| label: diagnostic-kelp
+
+# create diagnostic plots for the kelp model, displayed in a 2x2 grid
+par(mfrow = c(2, 2))
+plot(kelp_model)
+```
+
+The QQ plot of residuals has a few hiccups, but the data is close to the reference line with no obvious pattern, so the residuals are normally distributed.
+
+The residuals are also homoscedastic since neither the residual vs fitted nor the scale-location model show clear patterns.
+
+As a bonus, the residuals vs leverage plot also shows no outliers since all points are inside Cook's Distance.
+
+### Correlation Test
+
+```{r}
+#| label: correlation-test
+
+# run the correlation test
+cor.test(kelp$temp_c, kelp$kelp_elong,
+         method = "pearson")
+```
+
 
 ## d.
 
