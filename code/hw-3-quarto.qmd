@@ -177,7 +177,7 @@ ggplot(walk_clean,
     height = 0,
     # narrow horizontal jitter
     width = 0.2) +
-  # setting theme to classic to remove grid lines
+  # setting theme to black-white
   theme_bw() +
   # removing legend
   theme(legend.position = "None") +
@@ -188,7 +188,7 @@ ggplot(walk_clean,
     # renaning y-axis
     y = "Distance Walked (km)",
     # renaming title
-    title = "Distance Walked Varies by Lunch Location",
+    title = "Distance Walked by Lunch Location",
     # subtitle for including last observation
     subtitle = "Last Observation: May 20th"
   ) +
@@ -216,6 +216,47 @@ ggplot(walk_clean,
   ))
 ```
 
+```{r}
+#| label: plot-two
+
+# create a scatterplot for the data using walk_clean
+ggplot(walk_clean,
+       # x-axis: high temperature (in celsius)
+       # y-axis: distance walked (in km)
+       # color: set color by lunch location
+       mapping = aes(x = high_temperature_c,
+                     y = distance_walked_km)) +
+  # once again starting y from 0
+  # It would not make sense to set temperature to 0 too
+  # (this would make it hard to visualize the data's spread), 
+  # so I am leaving the x-axis as is
+  scale_y_continuous(limits=c(0, 14)) +
+  # create a scatterplot with pink points
+  geom_point(color = "violetred4") +
+  # setting theme to classic
+  theme_classic() +
+  # removing legend
+  theme(legend.position = "None") +
+  # renaming axes and title
+  labs(
+    # renaming x-axis
+    x = "High Temperature (celsius)",
+    # renaning y-axis
+    y = "Distance Walked (km)",
+    # renaming title
+    title = "Distance Walked by High Temperature"
+  ) +
+  # changing colors of various elements to improve contrast
+  theme(
+    # change x-axis color
+    axis.text.x = element_text(color = "black"),
+    # change y-axis color
+    axis.text.y = element_text(color = "black"),
+    # change panel background
+    panel.background = element_rect(fill = "cornsilk4"),
+    # change panel line colors to remove them
+    panel.grid = element_line(color = "cornsilk4"))
+```
 
 ## b.
 
