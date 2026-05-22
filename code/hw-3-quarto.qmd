@@ -137,7 +137,8 @@ The other test that could have been run was a Spearman's correlation, the non pa
 #| label: kelp-spearman
 
 # run spearman's correlation test
-# without the exact = false, the test returns an error since some data is of equal value and thus the same rank
+# without the exact = false, the test returns an error since some data is of 
+# equal value and thus the same rank
 cor.test(kelp$temp_c, kelp$kelp_elong,
          method = "spearman",
          exact = FALSE)
