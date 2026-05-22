@@ -278,6 +278,8 @@ Each point's vertical position represents the distance I walked, in kilometers, 
 
 ## a.
 
+My personal data is about walking, but I don't want to take a fitness approach to it. Rather, I see walking as a way to slow down and view transit as a way to appreciate the world around you, so I want my visualization to reflect that in some way. I am thinking of dividing the distance walked data by lunch location since that often reflected where I was that day and having a background that reflects the beauty of each location (ex: campus may be represented by Campus Point). The stress of many planned things (reflected by Calendar Events) can diminish this beauty, so I may want to show that in the visualization too (ex: by making the background pale when I had many things going on).
+
 ## b.
 
 ## c.
