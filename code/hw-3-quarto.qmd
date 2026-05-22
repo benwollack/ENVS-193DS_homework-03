@@ -251,9 +251,9 @@ ggplot(walk_clean,
     # change y-axis color
     axis.text.y = element_text(color = "black"),
     # change panel background
-    panel.background = element_rect(fill = "cornsilk4"),
+    panel.background = element_rect(fill = "cornsilk3"),
     # change panel line colors to remove them
-    panel.grid = element_line(color = "cornsilk4"))
+    panel.grid = element_line(color = "cornsilk3"))
 ```
 
 ## b.
