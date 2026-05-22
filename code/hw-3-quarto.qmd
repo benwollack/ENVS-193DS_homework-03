@@ -187,10 +187,8 @@ ggplot(walk_clean,
     x = "Lunch Location",
     # renaning y-axis
     y = "Distance Walked (km)",
-    # renaming title
-    title = "Distance Walked by Lunch Location",
-    # subtitle for including last observation
-    subtitle = "Last Observation: May 20th"
+    # including subtitle for including last observation
+    subtitle = "Last Observation: 2026, May 20th"
   ) +
   # changing colors of various elements to improve contrast
   theme(
@@ -243,8 +241,8 @@ ggplot(walk_clean,
     x = "High Temperature (celsius)",
     # renaning y-axis
     y = "Distance Walked (km)",
-    # renaming title
-    title = "Distance Walked by High Temperature"
+    # creating subtitle with last observation
+    subtitle = "Last Observation: 2026, May 20th"
   ) +
   # changing colors of various elements to improve contrast
   theme(
@@ -259,6 +257,21 @@ ggplot(walk_clean,
 ```
 
 ## b.
+
+### Plot 1
+
+Figure 1
+
+**Distance Walked by Lunch Location**
+
+Each point's vertical position represents the distance I walked, in kilometers, in one day. The colors and horizontal position represent where I had lunch that day, with each color corresponding to one of four lunch locations. `Campus` means that I purchased lunch on the main UCSB campus. `IV` means I purchased lunch in Isla Vista or had lunch at my home in Isla Vista. `Portola` means I had lunch at Portola Dining Commons. `Prepped` means I made food at home and ate it elsewhere. Data collected from my own observations using the app `Map My Walk`.
+
+### Plot 2
+Figure 2
+
+**Distance Walked by High Temperature**
+
+Each point's vertical position represents the distance I walked, in kilometers, in one day. The horizontal position represents the high temperature, in Celsius, for that day as predicted by the `Weather Underground` app when I woke up that morning. High temperature data is rounded to the nearest degree. Data collected from my own observations using the apps `Map My Walk` and `Weather Underground.`
 
 # Problem 3
 
