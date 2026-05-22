@@ -24,6 +24,7 @@ library(readxl)
 
 # read in data
 kelp <- read_csv(here("data", "temp-kelp.csv"))
+walk <- read_csv(here("data", "ben-data-tracker.csv"))
 ```
 
 # Problem 1
@@ -149,6 +150,72 @@ We found a moderate, inverse relationship between water temperature and kelp elo
 # Problem 2
 
 ## a.
+
+```{r}
+#| label: plot-one
+
+# create a new object to clean data
+walk_clean <- walk |> 
+  # remove uppercases and add underscores
+  clean_names() |> 
+  # remove N/A values
+  drop_na()
+# create a jitterplot for the data using walk_clean
+ggplot(walk_clean,
+       # x-axis: lunch location
+       # y-axis: distance walked (in km)
+       # color: set color by lunch location
+       mapping = aes(x = lunch_location,
+                     y = distance_walked_km,
+                     color = lunch_location)) +
+  # I want my y-axis to start at 0 so that scaling is visually accurate
+  # Code from a geeksforgeeks forum
+  scale_y_continuous(limits=c(0, 14)) +
+  # Create a jitterplot
+  geom_jitter(
+    # stop vertical jitter
+    height = 0,
+    # narrow horizontal jitter
+    width = 0.2) +
+  # setting theme to classic to remove grid lines
+  theme_bw() +
+  # removing legend
+  theme(legend.position = "None") +
+  # renaming axes and title
+  labs(
+    # renaming x-axis
+    x = "Lunch Location",
+    # renaning y-axis
+    y = "Distance Walked (km)",
+    # renaming title
+    title = "Distance Walked Varies by Lunch Location",
+    # subtitle for including last observation
+    subtitle = "Last Observation: May 20th"
+  ) +
+  # changing colors of various elements to improve contrast
+  theme(
+    # change x-axis color
+    axis.text.x = element_text(color = "black"),
+    # change y-axis color
+    axis.text.y = element_text(color = "black"),
+    # change panel background
+    panel.background = element_rect(fill = "lemonchiffon"),
+    # change panel lines to blend in with background
+    panel.grid = element_line(color = "lemonchiffon")
+    ) +
+  # change colors of data points
+  scale_colour_manual(values = c(
+    # change campus to a gold color to match UCSB :)
+    "Campus" = "goldenrod4",
+    # change IV to a lovely green
+    "IV" = "green4",
+    # change Portola to red
+    "Portola" = "tomato3",
+    # change prepped to a blue color
+    "Prepped" = "cornflowerblue"
+  ))
+```
+
 
 ## b.
 
