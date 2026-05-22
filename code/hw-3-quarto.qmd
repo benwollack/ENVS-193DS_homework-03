@@ -101,7 +101,7 @@ As a bonus, the residuals vs leverage plot also shows no outliers since all poin
 ```{r}
 #| label: correlation-test
 
-# run the correlation test
+# run pearson's correlation test
 cor.test(kelp$temp_c, kelp$kelp_elong,
          method = "pearson")
 ```
@@ -129,6 +129,22 @@ We found a moderate, inverse relationship between water temperature and kelp elo
 We found a moderate, inverse relationship between water temperature and kelp elongation rate (Pearson's r = -0.688, t(30) = -5.189, p < 0.001, $\alpha$ = 0.05). Our model predicts that as water temperature increases, kelp will grow more slowly. As ocean temperatures warm due to climate change, kelp growth rate will likely decrease and threaten the health of kelp forest ecosystems.
 
 ## f.
+
+The other test that could have been run was a Spearman's correlation, the non parametric variant of Pearson's correlation. The relationship appears monotonic, so the assumptions for this test were met too.
+
+```{r}
+#| label: kelp-spearman
+
+# run spearman's correlation test
+# without the exact = false, the test returns an error since some data is of equal value and thus the same rank
+cor.test(kelp$temp_c, kelp$kelp_elong,
+         method = "spearman",
+         exact = FALSE)
+```
+
+After accounting for ties, the test returns a similar p-value (< 0.001) and correlation ($\rho$ = -0.689). Therefore, we will interpret this test similarly. 
+
+We found a moderate, inverse relationship between water temperature and kelp elongation rate (Spearman's $\rho$ = -0.689, S = 9216.1, p < 0.001, $\alpha$ = 0.05). Our model predicts that as water temperature increases, kelp will grow more slowly. As ocean temperatures warm due to climate change, kelp growth rate will likely decrease and threaten the health of kelp forest ecosystems.
 
 # Problem 2
 
