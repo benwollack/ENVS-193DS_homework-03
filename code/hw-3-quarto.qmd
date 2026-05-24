@@ -294,8 +294,16 @@ My personal data is about walking, but I don't want to take a fitness approach t
 
 The test being used is a Wilcoxon test. The response variable is the abundance of nitrogen, phosphorus and potassium in the soil while the predictor variable is the application of vermicompost compared to the control. This test is used to see if vermicompost does actually increase soil nutrients. A statistically significant result would indicate that vermicomposting increases soil nitrogen, phosphorus and potassium.
 
+![Vermicompost](statistical-critique-vermicompost.jpg)
+
+![Control](statistical-critique-control.jpg)
+
 ## b.
 
+There is high visual clarity in the authors' figures. The boxplots establish metrics of central tendency and spread, and the underlying data is shown, though it doesn't distract from the boxplots. The axes are clear, and from the axes labels, it's easy to see that these are comparing soil characteristics at different locations over time. The colors are effective, making it easy to differentiate years and see outliers. My main critique is that the y-axis in the left column is not necessarily aligned with the y-axis in the right column (ex: chart c ranges from 15-25 while chart d to the right ranges from 7.5-17.5 despite no new label and being horizontally level with figure c).
+
 ## c.
+
+The figure does a good job reducing visual clutter. The only elements are present are those that are essential to making the chart readable (for example, locations and axis labels). Listing year 1 and year 7 for every location does increase ink relative to data, and it could potentially be improved by using year as a major axis label and just listing the number for each location, but this could also make the chart less intuitive, so I understand the authors' choice. The overall data:ink ratio is fairly high; there is a lot of data described with little text.
 
 ## d.
