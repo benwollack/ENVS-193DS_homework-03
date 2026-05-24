@@ -292,6 +292,8 @@ My personal data is about walking, but I don't want to take a fitness approach t
 
 ## a.
 
+The test being used is a Wilcoxon test. The response variable is the abundance of nitrogen, phosphorus and potassium in the soil while the predictor variable is the application of vermicompost compared to the control. This test is used to see if vermicompost does actually increase soil nutrients. A statistically significant result would indicate that vermicomposting increases soil nitrogen, phosphorus and potassium.
+
 ## b.
 
 ## c.
