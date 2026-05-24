@@ -307,3 +307,5 @@ There is high visual clarity in the authors' figures. The boxplots establish met
 The figure does a good job reducing visual clutter. The only elements are present are those that are essential to making the chart readable (for example, locations and axis labels). Listing year 1 and year 7 for every location does increase ink relative to data, and it could potentially be improved by using year as a major axis label and just listing the number for each location, but this could also make the chart less intuitive, so I understand the authors' choice. The overall data:ink ratio is fairly high; there is a lot of data described with little text.
 
 ## d.
+
+The figures are mostly good as is, but I would realign figures b, d and f (right column) so that their y-axes aligned with figures a, c and e, as this would allow for better comparison between the drought-prone and salinization-affected regions. Listing year twice on the x-axis is also redundant, so I would remove the smaller year label and just keep the number.
