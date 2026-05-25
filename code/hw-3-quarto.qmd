@@ -278,7 +278,11 @@ Each point's vertical position represents the distance I walked, in kilometers, 
 
 ## a.
 
-My personal data is about walking, but I don't want to take a fitness approach to it. Rather, I see walking as a way to slow down and view transit as a way to appreciate the world around you, so I want my visualization to reflect that in some way. I am thinking of dividing the distance walked data by lunch location since that often reflected where I was that day and having a background that reflects the beauty of each location (ex: campus may be represented by Campus Point). The stress of many planned things (reflected by Calendar Events) can diminish this beauty, so I may want to show that in the visualization too (ex: by making the background pale when I had many things going on).
+My personal data is about walking, but I don't want to take a fitness approach to it. Rather, I see walking as a way to slow down and view transit as a way to appreciate the world around you, so I want my visualization to reflect that in some way. Still, I can only appreciate the walk when I'm not stressed, which calendar events is a good proxy for. I also never used temperature in any of my infographic visualizations, and it's the only variable I didn't use, so I want to reflect that here in some way. Since I can represent many variables at once here (and Dear Data did that), I'll throw bus trips into the mix too.
+
+I love the Dear Data visualizations, as it remains organized and readable while maintaining abstraction, it's a good way to get people curious about the data, and there is a lot of flexibility in how to show the data. I'm a plant person, and they're usually what I pay attention to during walks, so the plants (tomatoes specifically) are sneaking their way into this.
+
+I will have number of fruits distance walked (rounded to the nearest kilometer). Roots ultimately support the plant, and when I'm stressed (more events), that should correspond to fewer roots. Temperature can be represented with leaf color (gradient, hot = leaves are burnt yellow). Bus trips can be represented by the number of flowers.
 
 ## b.
 
