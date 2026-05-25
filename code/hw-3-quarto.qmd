@@ -146,7 +146,7 @@ cor.test(kelp$temp_c, kelp$kelp_elong,
 
 After accounting for ties, the test returns a similar p-value (< 0.001) and correlation ($\rho$ = -0.689). Therefore, we will interpret this test similarly. 
 
-We found a moderate, inverse relationship between water temperature and kelp elongation rate (Spearman's $\rho$ = -0.689, S = 9216.1, p < 0.001, $\alpha$ = 0.05). Our model predicts that as water temperature increases, kelp will grow more slowly. As ocean temperatures warm due to climate change, kelp growth rate will likely decrease and threaten the health of kelp forest ecosystems.
+We found a moderate, inverse relationship between water temperature (in Celsius) and kelp elongation rate (in cm per day) (Spearman's $\rho$ = -0.689, S = 9216.1, p < 0.001, $\alpha$ = 0.05). Our model predicts that as water temperature increases, kelp will grow more slowly. As ocean temperatures warm due to climate change, kelp growth rate will likely decrease and threaten the health of kelp forest ecosystems.
 
 # Problem 2
 
