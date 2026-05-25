@@ -31,7 +31,7 @@ walk <- read_csv(here("data", "ben-data-tracker.csv"))
 
 ## a.
 
-To determine the strength of the relationship between temperature and kelp elongation rate, we will need a correlation test, of which there are two: Pearson's correlation (r) and Spearman's correlation ($\rho$). Both require independent observations. Pearson's correlation is the parametric version and also requires data that appears linear and continuous. Spearman's correlation is the nonparametric version and requires data that is monotonic, meaning that as one variable increases, the other variable, on average, strictly increases or decreases; the trend cannot go up and down. 
+To determine the strength of the relationship between temperature (in Celsius) and kelp elongation rate (in cm per day), we will need a correlation test, of which there are two: Pearson's correlation (r) and Spearman's correlation ($\rho$). Both require independent observations. Pearson's correlation is the parametric version and also requires data that appears linear and continuous. Spearman's correlation is the nonparametric version and requires data that is monotonic, meaning that as one variable increases, the other variable, on average, strictly increases or decreases; the trend cannot go up and down. 
 
 ## b.
 
@@ -66,7 +66,7 @@ There may be a slight curve in the data, but a linear model also seems reasonabl
 
 ## c.
 
-Since the data appears linear, we will run a Pearson's correlation, which requires checking for linearity, the normality of the residuals and the homoscedasticity of the residuals.
+Since the data appears linear, we will run a Pearson's correlation, which requires checking for linearity (can be seen in the plot for 1b, it appears reasonably linear), the normality of the residuals and the homoscedasticity of the residuals.
 
 ### Diagnostic Plots
 
@@ -96,6 +96,8 @@ The QQ plot of residuals has a few hiccups, but the data is close to the referen
 The residuals are also homoscedastic since neither the residual vs fitted nor the scale-location model show clear patterns.
 
 As a bonus, the residuals vs leverage plot also shows no outliers since all points are inside Cook's Distance.
+
+Again, the plot from 1b also makes the assumption of linearity valid, as the data appears linear.
 
 ### Correlation Test
 
@@ -189,7 +191,7 @@ ggplot(walk_clean,
     # renaning y-axis
     y = "Distance Walked (km)",
     # including subtitle for including last observation
-    subtitle = "Last Observation: 2026, May 20th"
+    subtitle = "Last Observation: 2026, May 24th"
   ) +
   # changing colors of various elements to improve contrast
   theme(
@@ -243,7 +245,7 @@ ggplot(walk_clean,
     # renaning y-axis
     y = "Distance Walked (km)",
     # creating subtitle with last observation
-    subtitle = "Last Observation: 2026, May 20th"
+    subtitle = "Last Observation: 2026, May 24th"
   ) +
   # changing colors of various elements to improve contrast
   theme(
@@ -261,18 +263,15 @@ ggplot(walk_clean,
 
 ### Plot 1
 
-Figure 1
+**Figure 1 - Distance Walked by Lunch Location**
 
-**Distance Walked by Lunch Location**
-
-Each point's vertical position represents the distance I walked, in kilometers, in one day. The colors and horizontal position represent where I had lunch that day, with each color corresponding to one of four lunch locations. `Campus` means that I purchased lunch on the main UCSB campus. `IV` means I purchased lunch in Isla Vista or had lunch at my home in Isla Vista. `Portola` means I had lunch at Portola Dining Commons. `Prepped` means I made food at home and ate it elsewhere. Data collected from my own observations using the app `Map My Walk`.
+Each point's vertical position in the jitterplot represents the distance I walked, in kilometers, in one day. The colors and horizontal position represent where I had lunch that day, with each color corresponding to one of four lunch locations. `Campus` means that I purchased lunch on the main UCSB campus. `IV` means I purchased lunch in Isla Vista or had lunch at my home in Isla Vista. `Portola` means I had lunch at Portola Dining Commons. `Prepped` means I made food at home and ate it elsewhere. Data collected from my own observations using the app `Map My Walk`.
 
 ### Plot 2
-Figure 2
 
-**Distance Walked by High Temperature**
+**Figure 2 - Distance Walked by High Temperature**
 
-Each point's vertical position represents the distance I walked, in kilometers, in one day. The horizontal position represents the high temperature, in Celsius, for that day as predicted by the `Weather Underground` app when I woke up that morning. High temperature data is rounded to the nearest degree. Data collected from my own observations using the apps `Map My Walk` and `Weather Underground.`
+Each point's vertical position in the represents the distance I walked, in kilometers, in one day. The horizontal position represents the high temperature, in Celsius, for that day as predicted by the `Weather Underground` app when I woke up that morning. High temperature data is rounded to the nearest degree. Data collected from my own observations using the apps `Map My Walk` and `Weather Underground.`
 
 # Problem 3
 

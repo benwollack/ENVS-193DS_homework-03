@@ -27,7 +27,7 @@ Date,Distance Walked (km),Day of Week,Bus Trips,Calendar Events,High Temperature
 2026/05/18,5.89,Monday,0,5,24,Campus
 2026/05/19,7.51,Tuesday,0,4,26,Campus
 2026/05/20,9.85,Wednesday,2,4,25,Campus
-2026/05/21,,Thursday,,4,21,Campus
-2026/05/22,,Friday,,,,
-2026/05/23,,Saturday,,,,
-2026/05/24,,Sunday,,,,
+2026/05/21,7.42,Thursday,1,4,21,Campus
+2026/05/22,6.32,Friday,2,4,18,Portola
+2026/05/23,4.97,Saturday,0,0,18,Portola
+2026/05/24,4.47,Sunday,0,0,18,Portola
