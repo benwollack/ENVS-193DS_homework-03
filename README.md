@@ -16,7 +16,7 @@ This contains information for homework 3, including:
 
 The `data` folder contains the kelp data and my personal data.
 
-The `code` folder contains my code and its rendered output.
+The `code` folder contains my code and its rendered output. It also contains images for my statistical critique and affective visualization.
 
 ## Outputs
 
