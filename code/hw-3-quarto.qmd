@@ -285,7 +285,7 @@ I will have number of fruits distance walked (rounded to the nearest kilometer).
 
 ## b.
 
-![Affective Visualization Sketch](affective-sketch.jpg)
+![Affective Visualization Sketch](affective-sketch.jpg){width=60%}
 
 ## c.
 
@@ -293,7 +293,11 @@ I will have number of fruits distance walked (rounded to the nearest kilometer).
 
 ## d.
 
+I took inspiration from the simplicity of the Dear Data visualizations and decided to make an abstract, hand drawn representation of my distance walked, bus trips, calendar events and high temperature of each day as a bunch of tomato plants (my favorite plant). I feel as though college is hectic but also unique, so I drew each plant in a similar manner. Just as Dear Data did, there is a key for interpreting the data in the drawings.
+
 ## e.
+
+The link to my Google Slides can be found [here](https://docs.google.com/presentation/d/1cQGsD9WGw8fat2J-IWfoFEbNtIRZfNjcpzUw8spq6uY/edit?usp=sharing)
 
 # Problem 4
 
