@@ -70,6 +70,8 @@ Since the data appears linear, we will run a Pearson's correlation, which requir
 
 ### Histograms
 
+#### Temperature
+
 ```{r}
 #| label: temp-normality
 
@@ -78,43 +80,41 @@ Since the data appears linear, we will run a Pearson's correlation, which requir
 ggplot(
   data = kelp,
   aes(x = temp_c)) +
-  # create histogram, Rice Rule says to use 6 bins
+  # create histogram with custom color, Rice Rule says to use 6 bins
   geom_histogram(bins = 6,
                  color = "black",
                  fill = "chartreuse4") +
+  # rename axes
   labs(
     x = "Temperature (Celsius)",
     y = "Count"
   )
 ```
 
-The shape of the temperature distribution appears roughly normal, so the normality assumption for this variable is met. We now must check for the elongation rate.
+The shape of the temperature distribution appears roughly normal (there's a slight skew, but not enough to be concerned about), so the normality assumption for this variable is met. We now must check for the elongation rate.
+
+#### Elongation Rate
 
 ```{r}
 #| label: elong-normality
 
-# create a histogram for the temperature
-# use the kelp data and use the temperature column
+# create a histogram for the elongation rate
+# use the kelp data and use the elongatiob rate column
 ggplot(
   data = kelp,
   aes(x = kelp_elong)) +
-  # create histogram, Rice Rule says to use 6 bins
+  # create histogram with custom color, Rice Rule says to use 6 bins
   geom_histogram(bins = 6,
                  color = "black",
-                 fill = "chartreuse4") +
+                 fill = "springgreen4") +
+  # rename axes
   labs(
-    x = "Temperature (Celsius)",
+    x = "Kelp Elongation Rate (cm per day)",
     y = "Count"
   )
 ```
 
-The QQ plot of residuals has a few hiccups, but the data is close to the reference line with no obvious pattern, so the residuals are normally distributed.
-
-The residuals are also homoscedastic since neither the residual vs fitted nor the scale-location model show clear patterns.
-
-As a bonus, the residuals vs leverage plot also shows no outliers since all points are inside Cook's Distance.
-
-Again, the plot from 1b also makes the assumption of linearity valid, as the data appears linear.
+Once again, the data for the elongation rate appears normally distributed, so assumptions for Pearson's correlation are met.
 
 ### Correlation Test
 
@@ -146,11 +146,11 @@ We found a moderate, inverse relationship between water temperature and kelp elo
 
 ## e.
 
-We found a moderate, inverse relationship between water temperature and kelp elongation rate (Pearson's r = -0.688, t(30) = -5.189, p < 0.001, $\alpha$ = 0.05). Our model predicts that as water temperature increases, kelp will grow more slowly. As ocean temperatures warm due to climate change, kelp growth rate will likely decrease and threaten the health of kelp forest ecosystems.
+As ocean temperatures warm due to climate change, kelp growth rate will is predicted to decrease. This will likely threaten the health of kelp and kelp forest ecosystems, reducing their ability regrow from disturbances like grazing and slowing down the restoration of degraded kelp forests. This makes measures to protect existing kelp forests even more important.
 
 ## f.
 
-The other test that could have been run was a Spearman's correlation, the non parametric variant of Pearson's correlation. The relationship appears monotonic, so the assumptions for this test were met too.
+The other test that could have been run was a Spearman's correlation, the non parametric variant of Pearson's correlation. The relationship appears monotonic (the data consistently trends downward), so the assumptions for this test were met too.
 
 ```{r}
 #| label: kelp-spearman
@@ -163,9 +163,11 @@ cor.test(kelp$temp_c, kelp$kelp_elong,
          exact = FALSE)
 ```
 
-After accounting for ties, the test returns a similar p-value (< 0.001) and correlation ($\rho$ = -0.689). Therefore, we will interpret this test similarly. 
+After accounting for ties, the test returns a similar p-value (p < 0.001) and correlation ($\rho$ = -0.689) to Pearson's correlation (p < 0.001, r = -0.688). Since the correlations differ by 0.001, we can conclude the same thing from both tests.
 
-We found a moderate, inverse relationship between water temperature (in Celsius) and kelp elongation rate (in cm per day) (Spearman's $\rho$ = -0.689, S = 9216.1, p < 0.001, $\alpha$ = 0.05). Our model predicts that as water temperature increases, kelp will grow more slowly. As ocean temperatures warm due to climate change, kelp growth rate will likely decrease and threaten the health of kelp forest ecosystems.
+We found a moderate, inverse relationship between water temperature (in Celsius) and kelp elongation rate (in cm per day) (Spearman's $\rho$ = -0.689, S = 9216.1, p < 0.001, $\alpha$ = 0.05). Our model predicts that as water temperature increases, kelp will grow more slowly. 
+
+Note: Aside from the test results, this interpretation is equivalent to Pearson's correlation.
 
 # Problem 2
 
