@@ -31,7 +31,7 @@ walk <- read_csv(here("data", "ben-data-tracker.csv"))
 
 ## a.
 
-To determine the strength of the relationship between temperature (in Celsius) and kelp elongation rate (in cm per day), we will need a correlation test, of which there are two: Pearson's correlation (r) and Spearman's correlation ($\rho$). Both require independent observations. Pearson's correlation is the parametric version and also requires data that appears linear and continuous. Spearman's correlation is the nonparametric version and requires data that is monotonic, meaning that as one variable increases, the other variable, on average, strictly increases or decreases; the trend cannot go up and down. 
+To determine the strength of the relationship between temperature (in Celsius) and kelp elongation rate (in cm per day), we will need a correlation test, of which there are two: Pearson's correlation (r) and Spearman's correlation ($\rho$). Both require independent observations. Pearson's correlation is the parametric version and also requires data that appears linear and continuous and that all variables are nomrally distributed. Spearman's correlation is the nonparametric version and requires data that is monotonic, meaning that as one variable increases, the other variable, on average, strictly increases or decreases; the trend cannot go up and down. 
 
 ## b.
 
@@ -66,29 +66,46 @@ There may be a slight curve in the data, but a linear model also seems reasonabl
 
 ## c.
 
-Since the data appears linear, we will run a Pearson's correlation, which requires checking for linearity (can be seen in the plot for 1b, it appears reasonably linear), the normality of the residuals and the homoscedasticity of the residuals.
+Since the data appears linear, we will run a Pearson's correlation, which requires checking for linearity (can be seen in the plot for 1b, it appears reasonably linear). We must also check for continuous variables (which can be confirmed by thinking about the data, temperature and elongation rate are both continuous). Finally, we must check that the variables are normally distributed, which can be done by creating a histogram for each variable.
 
-### Diagnostic Plots
+### Histograms
 
 ```{r}
-#| label: kelp-model
+#| label: temp-normality
 
-# create a linear model in an object called kelp_model
-# this lets us later test for linearity
-kelp_model <- lm(
-  # formula: kelp elongation as a function of temperature
-  kelp_elong ~ temp_c,
-  # use kelp data
-  data = kelp
-)
+# create a histogram for the temperature
+# use the kelp data and use the temperature column
+ggplot(
+  data = kelp,
+  aes(x = temp_c)) +
+  # create histogram, Rice Rule says to use 6 bins
+  geom_histogram(bins = 6,
+                 color = "black",
+                 fill = "chartreuse4") +
+  labs(
+    x = "Temperature (Celsius)",
+    y = "Count"
+  )
 ```
 
-```{r}
-#| label: diagnostic-kelp
+The shape of the temperature distribution appears roughly normal, so the normality assumption for this variable is met. We now must check for the elongation rate.
 
-# create diagnostic plots for the kelp model, displayed in a 2x2 grid
-par(mfrow = c(2, 2))
-plot(kelp_model)
+```{r}
+#| label: elong-normality
+
+# create a histogram for the temperature
+# use the kelp data and use the temperature column
+ggplot(
+  data = kelp,
+  aes(x = kelp_elong)) +
+  # create histogram, Rice Rule says to use 6 bins
+  geom_histogram(bins = 6,
+                 color = "black",
+                 fill = "chartreuse4") +
+  labs(
+    x = "Temperature (Celsius)",
+    y = "Count"
+  )
 ```
 
 The QQ plot of residuals has a few hiccups, but the data is close to the reference line with no obvious pattern, so the residuals are normally distributed.
