@@ -21,3 +21,5 @@ The `code` folder contains my code and its rendered output. It also contains ima
 ## Outputs
 
 The rendered PDF for the code can be found [here](https://github.com/benwollack/ENVS-193DS_homework-03/blob/main/code/hw-3-quarto.pdf).
+
+The PDF for the resubmission cover letter can be found [here](https://github.com/benwollack/ENVS-193DS_homework-03/blob/main/Ben%20Wollack%20-%20Homework%203%20Resubmission%20Cover%20Letter.pdf)
