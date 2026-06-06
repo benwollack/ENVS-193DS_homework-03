@@ -88,7 +88,9 @@ ggplot(
   labs(
     x = "Temperature (Celsius)",
     y = "Count"
-  )
+  ) +
+  # change theme to remove gridlines
+  theme_classic()
 ```
 
 The shape of the temperature distribution appears roughly normal (there's a slight skew, but not enough to be concerned about), so the normality assumption for this variable is met. We now must check for the elongation rate.
@@ -111,7 +113,9 @@ ggplot(
   labs(
     x = "Kelp Elongation Rate (cm per day)",
     y = "Count"
-  )
+  ) +
+  # change theme to remove gridlines
+  theme_classic()
 ```
 
 Once again, the data for the elongation rate appears normally distributed, so assumptions for Pearson's correlation are met.
@@ -146,7 +150,7 @@ We found a moderate, inverse relationship between water temperature and kelp elo
 
 ## e.
 
-As ocean temperatures warm due to climate change, kelp growth rate will is predicted to decrease. This will likely threaten the health of kelp and kelp forest ecosystems, reducing their ability regrow from disturbances like grazing and slowing down the restoration of degraded kelp forests. This makes measures to protect existing kelp forests even more important.
+As ocean temperatures warm due to climate change, kelp growth rate is predicted to decrease. This will likely threaten the health of kelp and kelp forest ecosystems, reducing their ability regrow from disturbances like urchin grazing and slowing down the restoration of degraded kelp forests. This makes measures to protect existing kelp forests vitally important.
 
 ## f.
 
@@ -167,7 +171,7 @@ After accounting for ties, the test returns a similar p-value (p < 0.001) and co
 
 We found a moderate, inverse relationship between water temperature (in Celsius) and kelp elongation rate (in cm per day) (Spearman's $\rho$ = -0.689, S = 9216.1, p < 0.001, $\alpha$ = 0.05). Our model predicts that as water temperature increases, kelp will grow more slowly. 
 
-Note: Aside from the test results, this interpretation is equivalent to Pearson's correlation.
+Note: Aside from the test results, this interpretation is equivalent to Pearson's correlation, which makes sense given the similar Pearson's r and Spearman's $\rho$.
 
 # Problem 2
 
