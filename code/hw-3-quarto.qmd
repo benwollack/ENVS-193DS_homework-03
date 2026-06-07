@@ -86,7 +86,7 @@ ggplot(
                  fill = "chartreuse4") +
   # rename axes
   labs(
-    x = "Temperature (Celsius)",
+    x = "Temperature (\U00B0 C)",
     y = "Count"
   ) +
   # change theme to remove gridlines
@@ -264,7 +264,7 @@ ggplot(walk_clean,
   # renaming axes and title
   labs(
     # renaming x-axis
-    x = "High Temperature (celsius)",
+    x = "High Temperature (\U00B0 C)",
     # renaning y-axis
     y = "Distance Walked (km)",
     # creating subtitle with last observation
